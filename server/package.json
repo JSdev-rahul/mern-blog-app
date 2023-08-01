@@ -2,10 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "indx.js",
+  "main": "index.js",  
   "scripts": {
     "start": "nodemon index.js",
-    "build": "babel src -d dist"
+    "build": "npm run build"
   },
   "author": "",
   "license": "ISC",
