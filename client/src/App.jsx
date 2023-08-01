@@ -28,6 +28,8 @@ const PrivateRoute = ({ element, isAuthenticated, ...rest }) => {
 const App = () => {
   const { token } = useSelector((state) => state?.auth);
   axios.defaults.headers.common["Authorization"] = token;
+  axios.defaults.baseURL =
+    "https://64c93a36cc3d4b0ab56b93ef--bloggenius-api-v1.netlify.app/";
   // Check if the user is authenticated based on the token
   const isAuthenticated = !!token;
 
@@ -69,7 +71,6 @@ const App = () => {
 
   return (
     <Routes>
-   
       {/* Public Routes */}
       <Route
         path="/login"
@@ -138,7 +139,7 @@ const App = () => {
             ></PrivateRoute>
           }
         ></Route>
-          <Route
+        <Route
           path="/my-bookmark-post"
           element={
             <PrivateRoute
