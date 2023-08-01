@@ -1,0 +1,23 @@
+/* .sweetalert-popup {
+    z-index: 99999910000 !important;
+    backdrop-filter: none !important;
+    padding-top: 50px;
+  }
+  
+  .sweetalert-content {
+    backdrop-filter: none !important;
+  }
+  
+  .sweetalert-confirm-button {
+    backdrop-filter: none !important;
+  }
+  .swal-overlay {
+    z-index: 9999 !important;
+  }
+  
+  .swal-toast-container {
+    z-index: 10000 !important;
+  } */
+  div:where(.swal2-container) {
+    z-index: 9999999999999999999 !important;
+  }

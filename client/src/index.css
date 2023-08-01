@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  background-color: darkgray;
+} */
+
+a{
+  color: blue;
+}
+
+article h1{
+  font-size:x-large;
+}
+article p {
+
+  font-size: large;
+
+}
