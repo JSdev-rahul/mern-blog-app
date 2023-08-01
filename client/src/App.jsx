@@ -11,7 +11,6 @@ import CreatePostPage from "./pages/CreatePostPage";
 import { PostListPage } from "./pages/PostListPage";
 import BookmarkPage from "./pages/Bookmark";
 
-axios.defaults.baseURL = "http://localhost:3000/";
 
 // Custom public route component
 const PublicRoute = ({ element, isAuthenticated, ...rest }) => {
