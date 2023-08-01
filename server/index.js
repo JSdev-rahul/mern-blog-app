@@ -8,7 +8,7 @@ const PORT = 3000;
 const path = require("path");
 app.use(express.json());
 app.use( express.static('uploads/'));
-app.use(cors({ credential: true, origin: "http://localhost:5173" }));
+app.use(cors());
 Connection();
 
 app.use("/", route);
