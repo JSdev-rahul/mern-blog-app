@@ -1,4 +1,7 @@
 const express = require("express");
+const serverless= require( 'serverless-http');
+const api = express();
+
 const route = require("./routes/route.js");
 const Connection = require("./database/db.js");
 const app = express();
@@ -16,3 +19,5 @@ app.use("/", route);
 app.listen(PORT, () => {
   console.log(`server start --port ${PORT} `);
 });
+export const handler = serverless(api);
+
