@@ -26,7 +26,6 @@ const PrivateRoute = ({ element, isAuthenticated, ...rest }) => {
 const App = () => {
   const { token } = useSelector((state) => state?.auth);
   axios.defaults.headers.common["Authorization"] = token;
-  console.log(import.meta.env.VITE_API_URL)
   const baseurl = import.meta.env.VITE_API_URL
   axios.defaults.baseURL = baseurl
   const isAuthenticated = !!token;

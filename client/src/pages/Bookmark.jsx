@@ -186,7 +186,7 @@ const BookmarkPage = () => {
                       <div className="flex items-center">
                         <BiTimeFive className="text-gray-500 mr-1" />
                         <span className="text-sm text-gray-500">
-                          {moment(item?.postId.createdAt).format(
+                          {moment(item?.postId?.createdAt).format(
                             "MMM Do YY h:mm A"
                           )}
                         </span>
