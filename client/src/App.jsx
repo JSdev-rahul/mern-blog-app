@@ -28,7 +28,7 @@ const App = () => {
   const { token } = useSelector((state) => state?.auth);
   axios.defaults.headers.common["Authorization"] = token;
   axios.defaults.baseURL =
-    "https://64c93a36cc3d4b0ab56b93ef--bloggenius-api-v1.netlify.app/";
+    "https://bloggenius.onrender.com";
   // Check if the user is authenticated based on the token
   const isAuthenticated = !!token;
 
