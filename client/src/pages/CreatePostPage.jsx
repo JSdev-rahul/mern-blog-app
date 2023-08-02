@@ -2,6 +2,8 @@ import * as React from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useDispatch, useSelector } from "react-redux";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import LoadingSvg from "../component/LoadingSvg";
 import { DialogBox } from "../component/DialogBox";
 import { ReactNotifications } from "react-notifications-component";
@@ -174,10 +176,10 @@ const CreatePostPage = ({ update }) => {
         </div>
         <div className="w-full h-24">
           {id && (
-            <img
+            <LazyLoadImage
               className="w-full h-40"
               src={`${import.meta.env.VITE_API_URL}/${formik.values?.cover}`}
-            ></img>
+            ></LazyLoadImage>
           )}
         </div>
         <div className="mb-4 mt-20">

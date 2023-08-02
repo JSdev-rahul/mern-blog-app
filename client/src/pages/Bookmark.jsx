@@ -15,6 +15,7 @@ import { removePosts } from "../redux/slices/post.slice";
 import { LottieAnimation } from "../utils/LottieHandler";
 import Swal from "sweetalert2";
 import { filterBookmarkPost } from "../redux/slices/bookmark.slice";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const BookmarkPage = () => {
   const { myPost } = useSelector((state) => state?.myPostSlice);
@@ -134,7 +135,7 @@ const BookmarkPage = () => {
                   onClick={() => handleNavigateToDetailsPage(item?.postId?._id)}
                 >
                   <div className="relative h-48">
-                    <img
+                    <LazyLoadImage
                       src={`${import.meta.env.VITE_API_URL}/${item?.postId?.cover}`}
                       alt={item.title}
                       className="object-cover w-full h-full rounded-t-lg"
@@ -168,7 +169,7 @@ const BookmarkPage = () => {
                 <div className="flex gap-4  justify-between mb-4 ml-4">
                   <div className="flex gap-4">
                     <div className="w-12 h-12">
-                      <img
+                      <LazyLoadImage
                         className="object-cover w-12 h-12 rounded-full"
                         src="https://media.istockphoto.com/id/882115168/photo/portrait-of-a-gloomy-young-man-in-a-dark-background.jpg?s=1024x1024&w=is&k=20&c=SW0MmcwwlSte8COFJeQ_26G0l6dVCqPJ1n-WK6czO6A="
                         alt="Author"

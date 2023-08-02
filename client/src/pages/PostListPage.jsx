@@ -23,6 +23,7 @@ import ScrollToTop from "../component/ScrollToTop";
 import { bookmarkAsyncThunk } from "../redux/asyncThunk/bookmark.asyncThunk";
 import ButtonHeader from "../component/ButtonHeader";
 import { BsBookmarkDashFill } from "react-icons/bs";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const PostListPage = () => {
   const [bookmarksIds, setBookmarksIds] = useState([]);
@@ -198,7 +199,7 @@ export const PostListPage = () => {
                     onClick={() => handleNavigateToDetailsPage(item?._id)}
                   >
                     <div className="relative h-48">
-                      <img
+                      <LazyLoadImage
                         src={`${import.meta.env.VITE_API_URL}/${item.cover}`}
                         alt={item.title}
                         className="object-cover w-full h-full rounded-t-lg"
@@ -234,7 +235,7 @@ export const PostListPage = () => {
                       {!myPost && (
                         <>
                           <div className="w-12 h-12">
-                            <img
+                            <LazyLoadImage
                               className="object-cover w-12 h-12 rounded-full"
                               src="https://media.istockphoto.com/id/882115168/photo/portrait-of-a-gloomy-young-man-in-a-dark-background.jpg?s=1024x1024&w=is&k=20&c=SW0MmcwwlSte8COFJeQ_26G0l6dVCqPJ1n-WK6czO6A="
                               alt="Author"
