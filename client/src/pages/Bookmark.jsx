@@ -135,7 +135,7 @@ const BookmarkPage = () => {
                 >
                   <div className="relative h-48">
                     <img
-                      src={`http://localhost:3000/${item?.postId?.cover}`}
+                      src={`${import.meta.env.VITE_API_URL}/${item?.postId?.cover}`}
                       alt={item.title}
                       className="object-cover w-full h-full rounded-t-lg"
                     />

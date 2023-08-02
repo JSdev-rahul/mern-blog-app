@@ -39,11 +39,6 @@ export const PostListPage = () => {
 
   const [previousScrollPosition, setPreviousScrollPosition] = useState(0);
 
-  // useEffect(() => {
-  //   const uniqueObject = uniqBy(posts, (obj) => obj._id);
-  //   setAllPostList(uniqueObject);
-  // }, [posts]);
-
   useEffect(() => {
     if (!isBookmarkPage) {
       fetchPosts();
@@ -161,8 +156,6 @@ export const PostListPage = () => {
               "success"
             );
             fetchBookmarkPost();
-
-            // fetchBookmarkPost();
           })
           .catch((err) => {
             console.log("something went wrong");
@@ -206,7 +199,7 @@ export const PostListPage = () => {
                   >
                     <div className="relative h-48">
                       <img
-                        src={`http://localhost:3000/${item.cover}`}
+                        src={`${import.meta.env.VITE_API_URL}/${item.cover}`}
                         alt={item.title}
                         className="object-cover w-full h-full rounded-t-lg"
                       />

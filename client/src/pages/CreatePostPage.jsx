@@ -176,7 +176,7 @@ const CreatePostPage = ({ update }) => {
           {id && (
             <img
               className="w-full h-40"
-              src={`http://localhost:3000/${formik.values?.cover}`}
+              src={`${import.meta.env.VITE_API_URL}/${formik.values?.cover}`}
             ></img>
           )}
         </div>

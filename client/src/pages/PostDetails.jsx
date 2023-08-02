@@ -60,7 +60,7 @@ export const PostDetails = () => {
 
               <div className="mb-4">
                 <img
-                  src={`http://localhost:3000/${item.cover}`}
+                  src={`${import.meta.env.VITE_API_URL}/${item.cover}`}
                   alt="post cover"
                   className="w-full h-96 object-cover rounded-lg"
                 />

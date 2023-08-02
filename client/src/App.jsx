@@ -11,7 +11,6 @@ import CreatePostPage from "./pages/CreatePostPage";
 import { PostListPage } from "./pages/PostListPage";
 import BookmarkPage from "./pages/Bookmark";
 
-
 // Custom public route component
 const PublicRoute = ({ element, isAuthenticated, ...rest }) => {
   return isAuthenticated ? <Navigate to="/" /> : element;
@@ -27,9 +26,9 @@ const PrivateRoute = ({ element, isAuthenticated, ...rest }) => {
 const App = () => {
   const { token } = useSelector((state) => state?.auth);
   axios.defaults.headers.common["Authorization"] = token;
-  axios.defaults.baseURL =
-    "https://bloggenius.onrender.com";
-  // Check if the user is authenticated based on the token
+  console.log(import.meta.env.VITE_API_URL)
+  const baseurl = import.meta.env.VITE_API_URL
+  axios.defaults.baseURL = baseurl
   const isAuthenticated = !!token;
 
   axios.interceptors.response.use(
